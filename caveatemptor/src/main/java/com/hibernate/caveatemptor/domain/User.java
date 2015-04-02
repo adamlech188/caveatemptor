@@ -2,6 +2,10 @@ package com.hibernate.caveatemptor.domain;
 
 import java.util.StringTokenizer;
 
+import javax.naming.InvalidNameException;
+
+
+
 public class User {
 
 	private String firstname; 
@@ -23,7 +27,8 @@ public class User {
 	public String getFirstname() {
 		return firstname;
 	}
-	public void setFirstname(String firstname) {
+	public void setFirstname(String firstname) throws InvalidNameException {
+		
 		this.firstname = firstname;
 	}
 	public String getLastname() {
